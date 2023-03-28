@@ -1,5 +1,6 @@
 <template>
-    <div :class="loadingStore.loading ? 'Container bgChange' : 'Container'">
+    <PopupPageErrorSuccess/>
+    <div :class="loadingStore.loading || popupStore.popup || retailerauthStore.loading ? 'Container bgChange' : 'Container'">
         <div class="left">   
             <div class="logincontainer">
 
@@ -12,11 +13,11 @@
                 <div class="content1 coll">
                     Sign in to NovaGas Retail Portal
                 </div>
-                <form @submit.prevent="">
+                <form @submit.prevent="retailerauthStore.retailerLogin">
 
                     <div class="mt-4">
-                        <input type="text" class="form-control input mt-5" placeholder="Phone Number" required=true>
-                        <input type="password" class="form-control input mt-3" placeholder="PIN" required=true>
+                        <input type="text" class="form-control input mt-5" placeholder="Phone Number" required=true v-model="retailerauthStore.mobileNo">
+                        <input type="password" class="form-control input mt-3" placeholder="PIN" required=true v-model="retailerauthStore.password">
                         <div class="icon1">
                             <font-awesome-icon icon="fa-solid fa-eye" class="eyeicon"/>
                         </div>
@@ -33,7 +34,8 @@
                         </div>
                     </div>
                     <div>
-                        <input type="submit" class="btn btn-primary login" value="Login">
+                        <button-component text="Login" ></button-component>
+                        <!-- <input type="submit" class="btn btn-primary login" value="Login"> -->
                     </div>
                 </form>
                 <div class="createaccount">
@@ -49,13 +51,22 @@
 
 <script>
 import { useLodingSpinner } from '@/stores/Loading/loading';
+import PopupPageErrorSuccess from '../Popup/PopupPageErrorSuccess.vue';
+import { usePopupLoginSignup } from '@/stores/PopupLoginSignup/loginsignup';
+import { useRetailerAuth } from '@/stores/Auth/retailerauth';
 export default{
-    setup(){
-        const loadingStore=useLodingSpinner();
-        return{
-            loadingStore
-        }
-    }
+    setup() {
+        const loadingStore = useLodingSpinner();
+        const popupStore = usePopupLoginSignup();
+        const retailerauthStore=useRetailerAuth();
+        return {
+            loadingStore,
+            popupStore,
+            retailerauthStore
+        };
+    },
+    components: { PopupPageErrorSuccess },
+   
 }
 </script>
 
@@ -68,7 +79,9 @@ export default{
     justify-content: space-around;
 }
 .bgChange{
-    opacity:0.5;
+    opacity:0.4;
+    pointer-events: none;
+    /* background-color: rgb(158, 157, 157); */
 }
 .logincontainer{
     width:320px;
@@ -129,12 +142,7 @@ export default{
 .coll2{
     color:#274383
 }
-.login{
-    width:296px;
-    background-color: #01263C;
-    height: 48px;
-    margin-top: 20px;
-}
+
 .createaccount{
     font-size: 14px;
     margin-top:20px;
@@ -150,6 +158,8 @@ export default{
 }
 .logo2{
     width:100%;
+    z-index: 1;
+    position: relative;
 }
 @media screen and (max-width:420px) {
     .right{

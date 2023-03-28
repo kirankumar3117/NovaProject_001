@@ -4,4 +4,4 @@ export const useLodingSpinner=defineStore('loading',{
     state:()=>({
         loading:false
     })
-})
+})                                                                                                                  

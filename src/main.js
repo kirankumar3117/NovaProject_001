@@ -3,19 +3,30 @@ import App from './App.vue'
 import router from './router'
 import { createPinia } from 'pinia'
 import 'bootstrap/dist/css/bootstrap.css'
+import buttonPlugin from './plugins/buttonPlugin'
 
-/* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core'
 
-/* import font awesome icon component */
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-/* import specific icons */
-import { faUserSecret,faEye } from '@fortawesome/free-solid-svg-icons'
+import { faUserSecret,faEye ,faXmark,faCircleExclamation} from '@fortawesome/free-solid-svg-icons';
 
-library.add(faUserSecret,faEye)
+library.add(faUserSecret,faEye,faXmark,faCircleExclamation)
+
 
 const pinia=createPinia();
 
+const app=createApp(App);
 
-createApp(App).component('font-awesome-icon', FontAwesomeIcon).use(pinia).use(router).mount('#app')
+app.component('font-awesome-icon', FontAwesomeIcon)
+
+app.use(pinia)
+
+app.use(router)
+
+app.use(buttonPlugin)
+
+app.mount('#app')
+
+
+// createApp(App).component('font-awesome-icon', FontAwesomeIcon).use(pinia).use(router).mount('#app')

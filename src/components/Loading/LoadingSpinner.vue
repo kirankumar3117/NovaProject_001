@@ -14,7 +14,16 @@
     width:100%;
     text-align: center;
 }
-.LoadingContainer{
+.LoadingSpinner{
     margin-top: 20%;
+    position: relative;
+}
+.spinner-border{
+    color:#01263C;
+}
+@media screen and (max-width:420px) {
+    .LoadingSpinner{
+        margin-top: 300px;
+    }
 }
 </style>
