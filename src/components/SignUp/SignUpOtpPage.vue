@@ -31,6 +31,7 @@
                         <button-component text="Submit" ></button-component>
                     </div>
                 </form>
+                <button-component text="Back" class="backbutton coll" @click="handleBackButton"></button-component>  
             </div>
         </div>
         <div class="right">
@@ -94,7 +95,12 @@ export default{
         document.querySelector("#one").focus();
     },
    
-    components: { PopupPageErrorSuccess }
+    components: { PopupPageErrorSuccess },
+    methods:{
+        handleBackButton(){
+            router.push({path:'/signup'})
+        }
+    }
 }
 </script>
 
@@ -136,5 +142,13 @@ export default{
 }
 .otprecievebox>div:nth-child(1){
     color:rgb(112, 112, 112);
+}
+.backbutton{
+    background-color:#FAFBFA ;
+    border: 1px solid rgb(175, 175, 175);
+}
+.backbutton:hover{
+    color:#01263C;
+    background-color:#ebebeb ;
 }
 </style>
