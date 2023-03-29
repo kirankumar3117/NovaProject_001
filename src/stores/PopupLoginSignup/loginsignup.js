@@ -15,7 +15,6 @@ export const usePopupLoginSignup=defineStore('loginsignup',{
             this.popupContent1='',
             this.popupContent2='',
             this.popupContent3=''
-
         }
     }
 })                                                                                                                  

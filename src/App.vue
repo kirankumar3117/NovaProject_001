@@ -5,7 +5,7 @@ import LoadingSpinner from './components/Loading/LoadingSpinner.vue';
 import LoadingSpinner from './components/Loading/LoadingSpinner.vue';
 
 <template>
-  <LoadingSpinner v-if="loadingStore.loading || reatailerauthStore.loading"/>
+  <LoadingSpinner v-if="loadingStore.loading"/>
 <router-view/>
 </template>
 
