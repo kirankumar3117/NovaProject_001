@@ -24,7 +24,8 @@
             <div>
                 <button-component text="ok" @click="popupStore.closePopup" class="okbutton"></button-component>
             </div>
-        </div>
+            <br/>
+        </div>1
     </div>
 </template>
 
@@ -48,7 +49,7 @@ export default{
 .popup{
     position: relative;
     width:350px;
-    height: 355px;
+    /* height: 355px; */
     margin-left: auto;
     margin-right: auto;
     margin-top:13%;
@@ -75,7 +76,7 @@ export default{
     position: relative;
     width:70px;
     height:70px;
-    top:35px;
+    top:45px;
 }
 .content{
     width:80%;
@@ -83,7 +84,7 @@ export default{
     font-size: 15px;
     font-weight: 200;
     color:rgb(92, 92, 92);
-    margin-top: 50px;
+    margin-top: 80px;
     text-align: center;
 }
 .content>div>span:nth-child(2){
