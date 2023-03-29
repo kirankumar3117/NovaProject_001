@@ -22,7 +22,10 @@
             </div>
         </div>
         <div class="right">
-
+            <div>
+                <ProgressBar text="signupmobile"/>
+            </div>
+            <img src="../../assets/login2.png" alt="" class="signupRightImage">
         </div>
     </div>
 </template>
@@ -30,27 +33,26 @@
 <script>
 import router from '@/router';
 import { useRetailerAuth } from '@/stores/Auth/retailerauth';
+import ProgressBar from '../ProgressBar/ProgressBar.vue';
 export default{
-    setup(){
-        const retailerAuth=useRetailerAuth();
-        return{
+    setup() {
+        const retailerAuth = useRetailerAuth();
+        return {
             retailerAuth
+        };
+    },
+    methods: {
+        handlePhoneNext() {
+            router.push({ path: "/signup/otp" });
         }
     },
-    methods:{
-        handlePhoneNext(){
-
-            router.push({path:'/signup/otp'})
-        }
-    }
+    components: { ProgressBar }
 }
 
 </script>
 
 <style scoped>
-.right{
-    border: 1px solid black;
-}
+
 .content1{
     margin-top: 50px;
 }
@@ -67,5 +69,11 @@ export default{
 .backbutton:hover{
     color:#01263C;
     background-color:#ebebeb ;
+}
+.signupRightImage{
+    width:100%;
+    z-index: 1;
+    position: relative;
+    height: 99%;
 }
 </style>

@@ -35,7 +35,10 @@
             </div>
         </div>
         <div class="right">
-
+            <div>
+                <ProgressBar text="otp"/>
+            </div>
+            <img src="../../assets/login2.png" alt="" class="signupRightImage">
         </div>
     </div>
 </template>
@@ -46,6 +49,7 @@ import PopupPageErrorSuccess from "../Popup/PopupPageErrorSuccess.vue";
 import { usePopupLoginSignup } from "@/stores/PopupLoginSignup/loginsignup";
 import { useLodingSpinner } from "@/stores/Loading/loading";
 import router from "@/router";
+import ProgressBar from "../ProgressBar/ProgressBar.vue";
 export default{
     name: "SignUpOtpPage",
     setup() {
@@ -95,7 +99,7 @@ export default{
         document.querySelector("#one").focus();
     },
    
-    components: { PopupPageErrorSuccess },
+    components: { PopupPageErrorSuccess, ProgressBar },
     methods:{
         handleBackButton(){
             router.push({path:'/signup'})
@@ -105,9 +109,7 @@ export default{
 </script>
 
 <style scoped>
-.right{
-    border: 1px solid black;
-}
+
 .content1{
     text-align: center;
     width:100%;
@@ -150,5 +152,11 @@ export default{
 .backbutton:hover{
     color:#01263C;
     background-color:#ebebeb ;
+}
+.signupRightImage{
+    width:100%;
+    z-index: 1;
+    position: relative;
+    height: 99%;
 }
 </style>
