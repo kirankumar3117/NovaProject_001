@@ -25,6 +25,7 @@
               
                 <button-component text="ok" @click="popupStore.closePopup"   class="okbutton" ></button-component>
             </div>
+            <br/>
         </div>
     </div>
 </template>
