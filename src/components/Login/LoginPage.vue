@@ -1,6 +1,6 @@
 <template>
     <PopupPageErrorSuccess/>
-    <div :class="loadingStore.loading || popupStore.popup || retailerauthStore.loading ? 'Container bgChange' : 'Container'">
+    <div :class="loadingStore.loading || popupStore.popup  ? 'Container bgChange' : 'Container'">
         <div class="left">   
             <div class="logincontainer">
 

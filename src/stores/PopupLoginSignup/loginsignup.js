@@ -3,7 +3,7 @@ import {defineStore} from "pinia";
 export const usePopupLoginSignup=defineStore('loginsignup',{
     state:()=>({
         popup:false,
-        popupIcon:'error',
+        popupIcon:'',
         popupContent1:'',
         popupContent2:'',
         popupContent3:''
@@ -11,7 +11,7 @@ export const usePopupLoginSignup=defineStore('loginsignup',{
     actions:{
         closePopup(){
             this.popup=false;
-            // this.popupIcon='',
+            this.popupIcon='',
             this.popupContent1='',
             this.popupContent2='',
             this.popupContent3=''
