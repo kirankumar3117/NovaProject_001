@@ -1,5 +1,8 @@
 /*  */
-
+.size25{
+    font-size: 22px;
+    font-weight: 500;
+}
 .LeftRightContainer{
     width:100%;
     height:100vh;
@@ -12,7 +15,7 @@
     pointer-events: none;
 }
 .leftcontainer{
-    width:320px;
+    width:330px;
     margin-left: auto;
     margin-right: auto;
     margin-top:15%;
@@ -42,7 +45,19 @@
 }
 .left{
     width:50%;
+   
+
 }
 .pointer{
     cursor: pointer;
+}
+
+
+@media screen and (max-width:420px) {
+    .right{
+        visibility: hidden;
+    }
+    .leftcontainer{
+        margin-left:15%;
+    }
 }

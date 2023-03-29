@@ -4,14 +4,15 @@
             <div class="loginerror">
                 <div>
 
-                    LOGIN ERROR
+                    {{ popupStore.popupHead }}
                 </div>
                 <div>
                     <!-- <font-awesome-icon icon="fa-solid fa-xmark" class="xmark" size="xl"/> -->
                 </div>
             </div>
             <div>
-                <font-awesome-icon icon="fa-solid fa-circle-exclamation" shake style="color: #eb0000;" size="100px" class="erroricon" @click="popupStore.closePopup" v-if="popupStore.popupIcon=='error'"/>
+                <font-awesome-icon icon="fa-solid fa-circle-exclamation" shake style="color: #eb0000;" size="100px" class="erroricon" @click="popupStore.closePopup" v-if="popupStore.popupIcon=='error' || popupStore.popupIcon=='otperror'"/>
+                <font-awesome-icon icon="fa-solid fa-circle-check" shake style="color: #3a7e3b;" class="erroricon" v-if="popupStore.popupIcon=='success'"/>
             </div>
             <div class="content">
                 <div v-if="popupStore.popupIcon=='error'">
@@ -19,6 +20,14 @@
                     <span>{{popupStore.popupContent2}}</span>
                    
                     <span> {{popupStore.popupContent3}}</span>
+                </div>
+                <div v-if="popupStore.popupIcon=='otperror' || popupStore.popupIcon=='success'">
+                    <div>
+                        {{ popupStore.popupContent1 }}
+                    </div>
+                    <div>
+                        {{ popupStore.popupContent2 }}
+                    </div>
                 </div>
             </div>
             <div>
@@ -39,7 +48,6 @@ export default{
             popupStore
         }
     },
-  
 }
 </script>
 
