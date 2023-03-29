@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div>
-                <font-awesome-icon icon="fa-solid fa-circle-exclamation" shake style="color: #eb0000;" size="100px" class="erroricon" @click="popupStore.closePopup" v-if="popupStore.popupIcon=='error'"/>
+                <font-awesome-icon icon="fa-solid fa-circle-exclamation" flip style="color: #eb0000;" size="100px" class="erroricon" @click="popupStore.closePopup" v-if="popupStore.popupIcon=='error'"/>
             </div>
             <div class="content">
                 <div v-if="popupStore.popupIcon=='error'">
@@ -22,15 +22,10 @@
                 </div>
             </div>
             <div>
-              
-                <button-component text="ok" @click="popupStore.closePopup"   class="okbutton" ></button-component>
+                <button-component text="ok" @click="popupStore.closePopup" class="okbutton"></button-component>
             </div>
             <br/>
-<<<<<<< HEAD
         </div>
-=======
-        </div>1
->>>>>>> dcc011e1f7ca520a01c31f633fff8f34671a1127
     </div>
 </template>
 
@@ -42,8 +37,7 @@ export default{
         return{
             popupStore
         }
-    },
-  
+    }
 }
 </script>
 
@@ -55,10 +49,6 @@ export default{
 .popup{
     position: relative;
     width:350px;
-<<<<<<< HEAD
-=======
-    /* height: 355px; */
->>>>>>> dcc011e1f7ca520a01c31f633fff8f34671a1127
     margin-left: auto;
     margin-right: auto;
     margin-top:13%;
@@ -85,7 +75,7 @@ export default{
     position: relative;
     width:70px;
     height:70px;
-    top:45px;
+    top:35px;
 }
 .content{
     width:80%;
@@ -93,11 +83,7 @@ export default{
     font-size: 15px;
     font-weight: 200;
     color:rgb(92, 92, 92);
-<<<<<<< HEAD
     margin-top: 70px;
-=======
-    margin-top: 80px;
->>>>>>> dcc011e1f7ca520a01c31f633fff8f34671a1127
     text-align: center;
 }
 .content>div>span:nth-child(2){
