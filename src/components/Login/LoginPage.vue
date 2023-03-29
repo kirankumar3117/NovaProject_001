@@ -17,9 +17,9 @@
 
                     <div class="mt-4">
                         <input type="text" class="form-control input mt-5" placeholder="Phone Number" required=true v-model="retailerauthStore.mobileNo">
-                        <input type="password" class="form-control input mt-3" placeholder="PIN" required=true v-model="retailerauthStore.password">
+                        <input type="password" class="form-control input mt-3" placeholder="PIN" required=true v-model="retailerauthStore.password" id="password">
                         <div class="icon1">
-                            <font-awesome-icon icon="fa-solid fa-eye" class="eyeicon"/>
+                            <font-awesome-icon icon="fa-solid fa-eye" class="eyeicon" @click="handleViewPassword"/>
                         </div>
                     </div>
                     <div class="fpassword coll">
@@ -66,6 +66,16 @@ export default{
         };
     },
     components: { PopupPageErrorSuccess },
+    methods:{
+        handleViewPassword(){
+           let password= document.querySelector("#password");
+           password.type='text';
+
+           setTimeout(()=>{
+            password.type='password'
+           },3000)
+        }
+    }
    
 }
 </script>
@@ -87,7 +97,7 @@ export default{
     width:320px;
     margin-left: auto;
     margin-right: auto;
-    margin-top:20%;
+    margin-top:15%;
     text-align: center;
    
 }

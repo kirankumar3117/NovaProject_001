@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div>
-                <font-awesome-icon icon="fa-solid fa-circle-exclamation" flip style="color: #eb0000;" size="100px" class="erroricon" @click="popupStore.closePopup" v-if="popupStore.popupIcon=='error'"/>
+                <font-awesome-icon icon="fa-solid fa-circle-exclamation" shake style="color: #eb0000;" size="100px" class="erroricon" @click="popupStore.closePopup" v-if="popupStore.popupIcon=='error'"/>
             </div>
             <div class="content">
                 <div v-if="popupStore.popupIcon=='error'">
@@ -22,7 +22,8 @@
                 </div>
             </div>
             <div>
-                <button-component text="ok" @click="popupStore.closePopup" class="okbutton"></button-component>
+              
+                <button-component text="ok" @click="popupStore.closePopup"   class="okbutton" ></button-component>
             </div>
             <br/>
         </div>1
@@ -37,7 +38,8 @@ export default{
         return{
             popupStore
         }
-    }
+    },
+  
 }
 </script>
 

@@ -20,10 +20,14 @@ export const useRetailerAuth=defineStore('retailerauth',{
                     password:this.password
                 })
                 this.loading.loading=false
+                this.mobileNo='',
+                this.password=''
                 console.log(res.data)
                 console.log(res.status)
             }catch(error){
                 console.log(error)
+                this.mobileNo='',
+                this.password=''
                 this.loading.loading=false
                 this.popup.popupContent1='You have provided an invalid information Please enter the right information or call '
                 this.popup.popupContent2='+233 302 428 550 '
