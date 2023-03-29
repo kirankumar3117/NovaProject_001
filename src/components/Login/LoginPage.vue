@@ -129,12 +129,5 @@ export default{
     z-index: 1;
     position: relative;
 }
-@media screen and (max-width:420px) {
-    .right{
-        visibility: hidden;
-    }
-    .leftcontainer{
-        margin-left:15%;
-    }
-}
+
 </style>

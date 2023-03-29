@@ -1,3 +1,4 @@
+import router from "@/router";
 import {defineStore} from "pinia";
 
 export const usePopupLoginSignup=defineStore('loginsignup',{
@@ -6,7 +7,9 @@ export const usePopupLoginSignup=defineStore('loginsignup',{
         popupIcon:'',
         popupContent1:'',
         popupContent2:'',
-        popupContent3:''
+        popupContent3:'',
+        popupHead:'',
+        popupPage:''
     }),
     actions:{
         closePopup(){
@@ -15,6 +18,9 @@ export const usePopupLoginSignup=defineStore('loginsignup',{
             this.popupContent1='',
             this.popupContent2='',
             this.popupContent3=''
+            if(this.popupPage=='signupsuccess'){
+                // router.push({path:'/login'})
+            }
         }
     }
 })                                                                                                                  
