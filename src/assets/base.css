@@ -1,0 +1,48 @@
+/*  */
+
+.LeftRightContainer{
+    width:100%;
+    height:100vh;
+    display: flex;;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.bgChange{
+    opacity:0.4;
+    pointer-events: none;
+}
+.leftcontainer{
+    width:320px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:15%;
+    text-align: center;
+}
+.logo{
+    width:100%;
+    text-align: center;
+}
+.logoimg{
+    width:153px;
+}
+.input{
+    width:95%;
+    margin-left:2.5%;
+    height:48px;
+    border: 1px solid rgb(148, 148, 148);
+}
+.coll{
+    color:#01263C;
+}
+.coll2{
+    color:#274383
+}
+.right{
+    width:50%;
+}
+.left{
+    width:50%;
+}
+.pointer{
+    cursor: pointer;
+}

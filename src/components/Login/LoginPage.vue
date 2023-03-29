@@ -1,11 +1,11 @@
 <template>
     <PopupPageErrorSuccess/>
-    <div :class="loadingStore.loading || popupStore.popup  ? 'Container bgChange' : 'Container'">
+    <div :class="loadingStore.loading || popupStore.popup  ? 'LeftRightContainer bgChange' : 'LeftRightContainer'">
         <div class="left">   
-            <div class="logincontainer">
+            <div class="leftcontainer">
 
-                <div class="image">
-                    <img src="../../assets/logo.png" alt="" class="img">
+                <div class="logo">
+                    <img src="../../assets/logo.png" alt="" class="logoimg">
                 </div>
                 <div class="welcome coll">
                     Welcome
@@ -81,33 +81,10 @@ export default{
 </script>
 
 <style scoped>
-.Container{
-    width:100%;
-    height:100vh;
-    display: flex;;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.bgChange{
-    opacity:0.4;
-    pointer-events: none;
-    /* background-color: rgb(158, 157, 157); */
-}
-.logincontainer{
-    width:320px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top:15%;
-    text-align: center;
-   
-}
-.image{
-    width:100%;
-    text-align: center;
-}
-.img{
-    width:153px;
-}
+
+
+
+
 .welcome{
     font-weight: bold;
     font-size: 28px;
@@ -116,15 +93,8 @@ export default{
 .content1{
     margin-top:8px;
 }
-.input{
-    width:95%;
-    margin-left:2.5%;
-    height:48px;
-    border: 1px solid rgb(148, 148, 148);
-    /* position: relative; */
-}
+
 .fpassword{
-    /* margin-top: 10px; */
     text-align: end;
     margin-right: 25px;
     font-size: 15px;
@@ -146,26 +116,14 @@ export default{
 .content2{
     font-size: 11px;
 }
-.coll{
-    color:#01263C;
-}
-.coll2{
-    color:#274383
-}
+
 
 .createaccount{
     font-size: 14px;
     margin-top:20px;
 }
-.pointer{
-    cursor: pointer;
-}
-.right{
-    width:50%;
-}
-.left{
-    width:50%;
-}
+
+
 .logo2{
     width:100%;
     z-index: 1;
@@ -175,7 +133,7 @@ export default{
     .right{
         visibility: hidden;
     }
-    .logincontainer{
+    .leftcontainer{
         margin-left:15%;
     }
 }

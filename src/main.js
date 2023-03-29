@@ -4,6 +4,7 @@ import router from './router'
 import { createPinia } from 'pinia'
 import 'bootstrap/dist/css/bootstrap.css'
 import buttonPlugin from './plugins/buttonPlugin'
+import "@/assets/base.css"
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 
