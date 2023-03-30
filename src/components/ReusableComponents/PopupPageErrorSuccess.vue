@@ -15,7 +15,7 @@
                 <font-awesome-icon icon="fa-solid fa-circle-check" shake style="color: #3a7e3b;" class="erroricon" v-if="popupStore.popupIcon=='success'"/>
             </div>
             <div class="content">
-                <div v-if="popupStore.popupIcon=='error'">
+                <div v-if="popupStore.popupIcon=='error'"> 
                     <span>{{ popupStore.popupContent1 }} </span>
                     <span>{{popupStore.popupContent2}}</span>
                    

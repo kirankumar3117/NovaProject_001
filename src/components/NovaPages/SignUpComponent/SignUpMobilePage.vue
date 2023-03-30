@@ -3,7 +3,7 @@
         <div class="left">
             <div class="leftcontainer">
                 <div class="image">
-                    <img src="../../assets/logo.png" alt="" class="logoimg">
+                    <img src="../../../assets/logo.png" alt="" class="logoimg">
                 </div>
                 <div class="coll size25 content1">
                     Enter the phone number of the customer
@@ -25,7 +25,7 @@
             <div>
                 <ProgressBar text="signupmobile"/>
             </div>
-            <img src="../../assets/login2.png" alt="" class="signupRightImage">
+            <img src="../../../assets/login2.png" alt="" class="signupRightImage">
         </div>
     </div>
 </template>
@@ -33,7 +33,7 @@
 <script>
 import router from '@/router';
 import { useRetailerAuth } from '@/stores/Auth/retailerauth';
-import ProgressBar from '../ProgressBar/ProgressBar.vue';
+import ProgressBar from './SignUpChildComponent/SignUpPregressBar.vue';
 export default{
     setup() {
         const retailerAuth = useRetailerAuth();

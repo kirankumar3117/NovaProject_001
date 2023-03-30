@@ -19,7 +19,7 @@ export const usePopupLoginSignup=defineStore('loginsignup',{
             this.popupContent2='',
             this.popupContent3=''
             if(this.popupPage=='signupsuccess'){
-                // router.push({path:'/login'})
+                router.push({path:'/signup/id'})
             }
         }
     }

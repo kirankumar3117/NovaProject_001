@@ -4,7 +4,7 @@
 
 
 <script>
-import LoginPage from '@/components/Login/LoginPage.vue';
+import LoginPage from '@/components/NovaPages/LoginComponent/LoginPage.vue';
 export default{
     components:{
         LoginPage
