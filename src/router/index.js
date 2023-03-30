@@ -7,14 +7,19 @@ const routes = [
     component:()=>import('@/views/LoginView.vue')
  },
  {
-    path:'/signup',
+    path:'/signup/mobile',
     name:'signup',
-    component:()=>import('@/views/SignUpView.vue')
+    component:()=>import('@/views/SignUpMobileView.vue')
  },
  {
   path:'/signup/otp',
   name:'signupotp',
   component:()=>import('@/views/SignUpOtpView.vue')
+ },
+ {
+   path:'/signup/id',
+   name:'signupid',
+   component:()=>import('@/views/SignUpIdView.vue')
  }
 ]
 

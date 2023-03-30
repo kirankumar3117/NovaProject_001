@@ -10,7 +10,7 @@ import LoadingSpinner from './components/Loading/LoadingSpinner.vue';
 </template>
 
 <script>
-import LoadingSpinner from './components/Loading/LoadingSpinner.vue';
+import LoadingSpinner from './components/ReusableComponents/LoadingSpinner.vue';
 import { useLodingSpinner } from './stores/Loading/loading';
 import { useRetailerAuth } from './stores/Auth/retailerauth';
 export default{

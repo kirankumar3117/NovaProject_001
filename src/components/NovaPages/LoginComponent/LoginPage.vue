@@ -5,7 +5,7 @@
             <div class="leftcontainer">
 
                 <div class="logo">
-                    <img src="../../assets/logo.png" alt="" class="logoimg">
+                    <img src="../../../assets/logo.png" alt="" class="logoimg">
                 </div>
                 <div class="welcome coll">
                     Welcome
@@ -44,14 +44,14 @@
             </div>
         </div>
         <div class="right">
-            <img src="../../assets/login2.png" alt="" class="logo2">
+            <img src="../../../assets/login2.png" alt="" class="logo2">
         </div>
     </div>
 </template>
 
 <script>
 import { useLodingSpinner } from '@/stores/Loading/loading';
-import PopupPageErrorSuccess from '../Popup/PopupPageErrorSuccess.vue';
+import PopupPageErrorSuccess from '../../ReusableComponents/PopupPageErrorSuccess.vue';
 import { usePopupLoginSignup } from '@/stores/PopupLoginSignup/loginsignup';
 import { useRetailerAuth } from '@/stores/Auth/retailerauth';
 export default{
@@ -125,7 +125,7 @@ export default{
 
 
 .logo2{
-    width:100%;
+    width:99%;
     z-index: 1;
     position: relative;
 }

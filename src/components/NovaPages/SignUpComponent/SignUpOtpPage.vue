@@ -5,7 +5,7 @@
         <div class="left">
             <div class="leftcontainer">
                 <div class="image">
-                    <img src="../../assets/logo.png" alt="" class="logoimg">
+                    <img src="../../../assets/logo.png" alt="" class="logoimg">
                 </div>
                 <div class="coll size25 otpcontent1">
                     Enter One-time Password
@@ -38,18 +38,18 @@
             <div>
                 <ProgressBar text="otp"/>
             </div>
-            <img src="../../assets/login2.png" alt="" class="signupRightImage">
+            <img src="../../../assets/login2.png" alt="" class="signupRightImage">
         </div>
     </div>
 </template>
 
 <script>
 import {useRetailerAuth} from "@/stores/Auth/retailerauth"
-import PopupPageErrorSuccess from "../Popup/PopupPageErrorSuccess.vue";
+import PopupPageErrorSuccess from "../../ReusableComponents/PopupPageErrorSuccess.vue";
 import { usePopupLoginSignup } from "@/stores/PopupLoginSignup/loginsignup";
 import { useLodingSpinner } from "@/stores/Loading/loading";
 import router from "@/router";
-import ProgressBar from "../ProgressBar/ProgressBar.vue";
+import ProgressBar from "./SignUpChildComponent/SignUpPregressBar.vue";
 export default{
     name: "SignUpOtpPage",
     setup() {
